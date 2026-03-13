@@ -7,15 +7,24 @@
 
 <style>
 body{
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
     margin:0;
-    background:#0f172a;
     color:white;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a, #0f172a);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
 }
 
 header{
-    background:#1e293b;
-    padding:30px;
+    background: rgba(15,23,42,0.85);
+    backdrop-filter: blur(8px);
+    padding:40px;
     text-align:center;
 }
 
@@ -26,16 +35,18 @@ section{
 }
 
 .info{
-    background:#1e293b;
-    padding:20px;
-    border-radius:10px;
+    background: rgba(30,41,59,0.85);
+    backdrop-filter: blur(10px);
+    padding:25px;
+    border-radius:12px;
     margin-top:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
 }
 
 footer{
     text-align:center;
     padding:20px;
-    background:#1e293b;
+    background: rgba(15,23,42,0.9);
 }
 </style>
 
