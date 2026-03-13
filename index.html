@@ -3,75 +3,161 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aldrin Nacion - Personal Portfolio</title>
+<title>Aldrin Nacion | Portfolio</title>
 
 <style>
+
+/* Reset */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+/* Body */
 body{
-    font-family: 'Segoe UI', Arial, sans-serif;
-    margin:0;
-    color:white;
-    background: linear-gradient(135deg, #0f172a, #1e3a8a, #0f172a);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
+font-family: 'Segoe UI', Arial, sans-serif;
+background: linear-gradient(135deg,#0f172a,#1e3a8a,#0f172a);
+background-size:400% 400%;
+animation:gradientBG 15s ease infinite;
+color:white;
+line-height:1.6;
 }
 
 @keyframes gradientBG{
-    0%{background-position:0% 50%;}
-    50%{background-position:100% 50%;}
-    100%{background-position:0% 50%;}
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
 }
 
-header{
-    background: rgba(15,23,42,0.85);
-    backdrop-filter: blur(8px);
-    padding:40px;
-    text-align:center;
+/* Navigation */
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+background:rgba(15,23,42,0.9);
+backdrop-filter:blur(10px);
 }
 
-section{
-    padding:40px;
-    max-width:900px;
-    margin:auto;
+nav h2{
+color:#38bdf8;
 }
 
-.info{
-    background: rgba(30,41,59,0.85);
-    backdrop-filter: blur(10px);
-    padding:25px;
-    border-radius:12px;
-    margin-top:20px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
 }
 
+nav a{
+text-decoration:none;
+color:white;
+font-weight:500;
+}
+
+/* Hero Section */
+.hero{
+text-align:center;
+padding:80px 20px;
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:10px;
+}
+
+.hero p{
+color:#cbd5f5;
+}
+
+/* Container */
+.container{
+max-width:1000px;
+margin:auto;
+padding:40px 20px;
+}
+
+/* Cards */
+.card{
+background:rgba(30,41,59,0.85);
+backdrop-filter:blur(10px);
+padding:25px;
+border-radius:12px;
+margin-top:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* Info Grid */
+.info-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+}
+
+/* Skills */
+.skills{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-top:10px;
+}
+
+.skill{
+background:#2563eb;
+padding:8px 15px;
+border-radius:20px;
+font-size:14px;
+}
+
+/* Footer */
 footer{
-    text-align:center;
-    padding:20px;
-    background: rgba(15,23,42,0.9);
+text-align:center;
+padding:25px;
+background:rgba(15,23,42,0.9);
+margin-top:40px;
 }
-</style>
 
+</style>
 </head>
 
 <body>
 
-<header>
-<h1>Aldrin Nacion</h1>
-<p>Student | Future Developer | Tech Enthusiast</p>
-</header>
+<!-- Navigation -->
+<nav>
+<h2>Aldrin</h2>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Info</a></li>
+<li><a href="#">Skills</a></li>
+</ul>
+</nav>
 
-<section>
-<h2>About Me</h2>
-<p>
-Hello! My name is <b>Aldrin Nacion</b>. I am 24 years old and currently studying at City College of Angeles.
-I live in Sto. Domingo, Angeles City. I am learning programming and web development
-and enjoy improving my skills in technology. This website is my personal portfolio hosted on GitHub Pages.
-</p>
+<!-- Hero -->
+<section class="hero">
+<h1>Aldrin Nacion</h1>
+<p>Student • Future Developer • Tech Enthusiast</p>
 </section>
 
-<section>
+<div class="container">
+
+<!-- About -->
+<div class="card">
+<h2>About Me</h2>
+<p>
+Hello! My name is <b>Aldrin Nacion</b>. I am 24 years old and currently studying at
+City College of Angeles. I live in Sto. Domingo, Angeles City.
+I am learning programming and web development and enjoy improving
+my skills in technology.
+</p>
+</div>
+
+<!-- Personal Info -->
+<div class="card">
 <h2>Personal Information</h2>
 
-<div class="info">
+<div class="info-grid">
 <p><b>Name:</b> Nacion, Aldrin</p>
 <p><b>Age:</b> 24</p>
 <p><b>Location:</b> Sto. Domingo, Angeles City</p>
@@ -80,19 +166,22 @@ and enjoy improving my skills in technology. This website is my personal portfol
 <p><b>Hobbies:</b> Gaming</p>
 </div>
 
-</section>
-
-<section>
-<h2>Skills</h2>
-
-<div class="info">
-<p>HTML</p>
-<p>CSS</p>
-<p>GitHub</p>
-<p>Learning Web Development</p>
 </div>
 
-</section>
+<!-- Skills -->
+<div class="card">
+<h2>Skills</h2>
+
+<div class="skills">
+<span class="skill">HTML</span>
+<span class="skill">CSS</span>
+<span class="skill">GitHub</span>
+<span class="skill">Web Development</span>
+</div>
+
+</div>
+
+</div>
 
 <footer>
 <p>© 2026 Aldrin Nacion | Personal Portfolio</p>
