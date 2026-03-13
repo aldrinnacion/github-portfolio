@@ -14,7 +14,7 @@
     }
 
     body {
-      background: #1f2937; 
+      background: #0f172a;
       color: #e5e7eb;
       line-height: 1.6;
     }
@@ -30,19 +30,18 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      background: linear-gradient(135deg, #4b5563); 
+      background: linear-gradient(135deg, #93b6e7);
       color: #f9fafb;
     }
-
     .profile-pic {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid rgba(255, 255, 255, 0.6);
-      margin-bottom: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    }
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid rgba(255, 255, 255, 0.6);
+  margin-bottom: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
 
     header h1 {
       font-size: 3rem;
@@ -56,14 +55,14 @@
     .btn {
       display: inline-block;
       padding: 12px 30px;
-      background: #2563eb; 
+      background: #0f172a;
       color: #fff;
       border-radius: 30px;
       transition: 0.3s;
     }
 
     .btn:hover {
-      background: #1d4ed8; /* darker blue on hover */
+      background: #020617;
     }
 
     section {
@@ -73,7 +72,7 @@
     h2 {
       font-size: 2.2rem;
       margin-bottom: 20px;
-      color: #38bdf8; /* soft blue accent */
+      color: #38bdf8;
     }
 
     .about p {
@@ -88,7 +87,7 @@
     }
 
     .skill {
-      background: #111827; /* dark card background */
+      background: #020617;
       padding: 20px;
       border-radius: 10px;
       text-align: center;
@@ -97,18 +96,108 @@
 
     .skill:hover {
       transform: translateY(-5px);
-      background: #1f2937; /* subtle hover */
+      background: #020617dd;
     }
+
+    .project-img{
+  width:100%;
+  height:150px;
+  object-fit:cover;
+  border-radius:8px;
+  margin:10px 0;
+}   
 
     .projects {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 25px;
       margin-top: 30px;
+      
     }
+    .contact-section {
+  background-color: #0a1a33;
+  padding: 80px 20px;
+  text-align: center;
+}
 
+.contact-container h2 {
+  color: #3bb6ff;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.email {
+  color: #ffffff;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.email a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.email a:hover {
+  text-decoration: underline;
+}
+
+.social-links {
+  color: white;
+  font-size: 16px;
+}
+
+.social-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+.social-links a:hover {
+  color: #3bb6ff;
+}
+.projects-section {
+  padding: 80px 10%;
+  background: #0a1a33;
+}
+
+.projects-section h2 {
+  color: #3bb6ff;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.projects-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  background: #020c1f;
+  padding: 30px;
+  border-radius: 12px;
+  width: 300px;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.project-card h3 {
+  margin-bottom: 10px;
+  color: #8ab4ff;
+}
+
+.project-card p {
+  font-size: 14px;
+  color: #cfd8ff;
+}
     .project {
-      background: #111827;
+      background: #020617;
       padding: 25px;
       border-radius: 12px;
       transition: 0.3s; 
@@ -124,7 +213,7 @@
     }
 
     footer {
-      background: #111827;
+      background: #020617;
       text-align: center;
       padding: 20px;
       font-size: 0.9rem;
@@ -140,13 +229,12 @@
 
 <body>
 
-  <!-- HERO -->
+  
   <header>
     <div>
         <img src="7873a74a-fb3a-498f-9222-80f442d12a3b.jpg" alt="Aldrin Nacion" class="profile-pic">
 
         <h1>Hi, I'm Aldrin Nacion 👋</h1>
-        <p>Web Developer • Graphic Designer • JavaScript</p>
         <a href="#contact" class="btn">Contact Me</a>
     </div>
   </header>
@@ -163,41 +251,131 @@
   <section>
     <h2>Skills</h2>
     <div class="skills">
-      <div class="skill">HTML</div>
-      <div class="skill">CSS</div>
-      <div class="skill">JavaScript</div>
+      <div class="skill" onclick="toggleDescription(this)">
+        HTML
+        <div class="skill-description">HTML is the standard markup language used to create web pages.</div>
+      </div>
+      <div class="skill" onclick="toggleDescription(this)">
+        CSS
+        <div class="skill-description">CSS is used to style and layout web pages, controlling colors, fonts, and spacing.</div>
+      </div>
+      <div class="skill" onclick="toggleDescription(this)">
+        JavaScript
+        <div class="skill-description">JavaScript is a programming language that makes web pages interactive and dynamic.</div>
+      </div>
     </div>
   </section>
 
-  <!-- PROJECTS -->
-  <section>
-    <h2>Projects</h2>
-    <div class="projects">
-      <div class="project">
-        <h3>Portfolio Website</h3>
-        <p>A modern personal portfolio built with HTML & CSS.</p>
-      </div>
-      <div class="project">
-        <h3>Landing Page</h3>
-        <p>Responsive landing page design for a startup.</p>
-      </div>
-      <div class="project">
-        <h3>Web App</h3>
-        <p>Interactive web application using JavaScript.</p>
-      </div>
+ 
+  <section id="projects" class="projects-section">
+    <h1>Midterms Tasks</h1>
+  
+    <div class="projects-container">
+  
+     
+      <a href="https://classroom.google.com/c/ODQwOTA0MzA4NTQw target="_blank" class="project-card">
+        <h2>Classwork</h2>
+        <p>Use City College Account</p>
+      </a>
+  
+      
+      <a href="file:///D:/nacion/Lopez,%20Nacion_Lab%20-%20Asking%20the%20Right%20Question_.pdf" target="_blank" class="project-card">
+        <h2>Paired Task 1</h2>
+      
+        <p>Paired Task 1. Asking the Right Questions</p>
+        <p> - </p>
+        <p>Me and Lopez we do here we seperate the task to do me I volunteer to put it in the docs and lopez gonna answer them</p>
+
+      </a>
+  
+   
+      <a href="https://docs.google.com/spreadsheets/d/1DKuLNlm3fl27g7eAOtNdDaF28oplkevb/edit?pli=1&gid=790971491#gid=790971491" target="_blank" class="project-card">
+        <h2>Task 1</h2>
+      
+        <img src="Screenshot 2026-03-13 105807.png" class="project-img">
+      
+        <p>Practice Task 1 Demo File for Data Preparation and Cleaning</p>
+      
+      </a>
+
+      <a href="https://docs.google.com/spreadsheets/d/1makSXkWaxMhMyNsKJMCWitY8iJOcpz5r/edit?gid=2058504444#gid=2058504444" target="_blank" class="project-card">
+
+        <h2>Task 2</h2>
+      
+        <img src="Screenshot 2026-03-13 114217.png" class="project-img">
+      
+        <p>Midterm Lab Task 1. Data Cleaning and Preparation</p>
+      
+      </a>
+
+      <a href="https://docs.google.com/spreadsheets/d/1bPH-hcg77mO3_c9gRyMpKm71hcRyaZPc/edit?gid=826621303#gid=826621303" target="_blank" class="project-card">
+
+        <h2>Midterm Task 2</h2>
+      
+        <img src="Screenshot 2026-03-13 114622.png" class="project-img">
+      
+        <p>Midterm Task 2. Pivot Tables and Charts in Excel</p>
+      
+      </a>
+
+      <a href="https://docs.google.com/spreadsheets/d/1B-3RIyKz7Ph9dZUVyRV9ppXi9XeyulIF/edit?gid=1193594749#gid=1193594749" target="_blank" class="project-card">
+
+        <h2>Practice Task_2</h2>
+      
+        <img src="Screenshot 2026-03-13 115008.png" class="project-img">
+      
+        <p>Practice Task_2_MS Excel Functions</p>
+      
+      </a>
+
+      <a href="https://docs.google.com/spreadsheets/d/1XUfBoHSGXYzQvyDPAb-2frK-Q_kCZtkn/edit?gid=682563494#gid=682563494" target="_blank" class="project-card">
+
+        <h2>Practice Task 3</h2>
+      
+        <img src="Screenshot 2026-03-13 115302.png" class="project-img">
+      
+        <p>Practice Task 3_Demo Creating Dashboards in Excel</p>
+      
+      </a>
+
+      <a href="https://docs.google.com/spreadsheets/d/1SOsCmdoaQzqxaDZ9-Z1iOIiT7fR3hdKDOZWX_iNnd1s/edit?gid=2063869334#gid=2063869334" target="_blank" class="project-card">
+
+        <h2>Midterm Task 3</h2>
+      
+        <img src="Screenshot 2026-03-13 120944.png" class="project-img">
+      
+        <p>Midterm Task 3 Normalization using Power Query</p>
+
+
+
     </div>
   </section>
 
   <!-- CONTACT -->
   <section class="contact" id="contact">
     <h2>Contact</h2>
-    <p>Email: aldrinnacion804@mail.com</p>
-    <p>LinkedIn | GitHub | Twitter</p>
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=aldrinnacion804@mail.com" target="_blank">
+      Email: aldrinnacion804@mail.com
+    </a>
+    <a href="https://www.linkedin.com/in/YOUR_LINK" target="_blank">LinkedIn</a>
+    <a href="https://github.com/YOUR_GITHUB" target="_blank">GitHub</a>
+    <a href="https://www.facebook.com/YOUR_FB" target="_blank">Facebook</a>  
   </section>
 
   <footer>
     © 2026 Aldrin Nacion. All rights reserved.
   </footer>
+
+  <script>
+    function toggleDescription(skillDiv) {
+      const desc = skillDiv.querySelector('.skill-description');
+      if (desc.style.display === 'block') {
+        desc.style.display = 'none';
+      } else {
+        desc.style.display = 'block';
+      }
+    }
+  </script>
 
 </body>
 </html>
